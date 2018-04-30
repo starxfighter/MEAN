@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Student Instructors</title>
+    <!-- <link rel="stylesheet" type="text/css" media="screen" href="main.css" /> -->
+    <!-- <script src="main.js"></script> -->
+</head>
+<body>
+    <script>
+        let students = [
+            {name: 'Remy', cohort: 'Jan'},
+            {name: 'Genevieve', cohort: 'March'},
+            {name: 'Chuck', cohort: 'Jan'},
+            {name: 'Osmund', cohort: 'June'},
+            {name: 'Nikki', cohort: 'June'},
+            {name: 'Boris', cohort: 'June'}
+        ];
+
+        function studentCohort(){
+            for(var x in students){
+                console.log('Name:', students[x].name, ", Cohort: ", students[x].cohort);
+            }
+        }
+        studentCohort();
+
+        let users = {
+            employees: [
+                {'first_name':  'Miguel', 'last_name' : 'Jones'},
+                {'first_name' : 'Ernie', 'last_name' : 'Bertson'},
+                {'first_name' : 'Nora', 'last_name' : 'Lu'},
+                {'first_name' : 'Sally', 'last_name' : 'Barkyoumb'}
+            ],
+            managers: [
+            {'first_name' : 'Lillian', 'last_name' : 'Chambers'},
+            {'first_name' : 'Gordon', 'last_name' : 'Poe'}
+            ]
+        };
+
+        function business(){
+            for(var key in users){
+                console.log(key);
+                var loop = 1;
+                for(var inkey in users[key]){
+                    var nameLength = users[key][inkey].first_name.length + users[key][inkey].last_name.length;
+                    console.log(loop, users[key][inkey].first_name, users[key][inkey].last_name, nameLength);
+                    loop += 1;
+                }
+            }
+        }
+        business();
+
+        // var users = {
+        //     'Students': [ 
+        //         {first_name:  'Michael', last_name : 'Jordan'},
+        //         {first_name : 'John', last_name : 'Rosales'},
+        //         {first_name : 'Mark', last_name : 'Guillen'},
+        //         {first_name : 'KB', last_name : 'Tonel'}
+        //     ],
+        //     'Instructors': [
+        //         {first_name : 'Michael', last_name : 'Choi'},
+        //         {first_name : 'Martin', last_name : 'Puryear'}
+        //     ]
+        // }
+
+        // function classroom(){
+        //     for(var key in users){
+        //         console.log(key);
+        //         var loop = 1;
+        //         for(var inkey in users[key]){
+        //             var nameLength = users[key][inkey].first_name.length + users[key][inkey].last_name.length;
+        //             // console.log("inkey", inkey);
+        //             console.log(loop, users[key][inkey].first_name, users[key][inkey].last_name, nameLength);
+        //             loop += 1;
+        //         }
+        //     }
+        // }
+
+        // classroom();
+    </script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+#wrapper{
+    width: 970px;
+    height: 600px;
+    background-image: url(https://tse2.mm.bing.net/th?id=OIP.MquopGrMm-ILPKv6LQM4DAHaEn&pid=Api);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+label{
+    font-size: 16pt;
+    font-weight: bold;
+    color: darkred;
+    display: block;
+    margin-bottom: 30px;
+
+}
+#city{
+    margin-left: 20px;
+}
+.add-row{
+    height: 32px;
+    width: 70px;
+    background-color: lightgreen;
+}
+.hide{
+    background-color: lightblue;
+    font-size: 20pt;
+}
+h1{
+    font-size: 22pt;
+    font-weight: bold;
+    color: blue;
+    margin-left: 20px;
+}
+.selector{
+    height: 400px;
+    display: block;
+}
+h2{
+    display: inline-block;
+    margin-left: 10px;
+}
+h3{
+    margin-left: 20px;
+}
