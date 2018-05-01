@@ -15,6 +15,7 @@ $(document).ready(
                 html_str += "<h1> Login </h1>";
                 html_str += "<h3>" + data.name + "</h3>";
                 $(".selector").html(html_str);}
+                
                 return false;
         })
 })
