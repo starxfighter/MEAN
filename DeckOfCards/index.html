@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Deck of Cards</title>
+    <!-- <link rel="stylesheet" type="text/css" media="screen" href="main.css" /> -->
+    <!-- <script src="main.js"></script> -->
+</head>
+<body>
+    <script>
+        class Deck {
+            constructor() {
+                this.deck = [];
+                this.reset();
+                this.shuffle();
+            }
+            reset() {
+                this.deck = [];
+
+                const suits = ['Hearts', 'Spades', 'Clubs', 'Diamonds'];
+                const vals = ['Ace',2,3,4,5,6,7,8,9,10,'Jack','Queen','King'];
+
+                for (let suit in suits) {
+                    for (let val in vals) {
+                        this.deck.push(`${vals[val]} of ${suits[suit]}`);
+                    }
+                }
+            }
+            shuffle() {
+                const deck = this.deck;
+                // const {deck} = this;
+                let m = deck.length, i;
+
+                while(m) {
+                    i = Math.floor(Math.random()*m--);
+                    let temp = deck[m];
+                    deck[m] = deck[i];
+                    deck[i] = temp
+                }
+                return this;
+            }
+            deal() {
+                return this.deck.pop();
+            }
+        }
+        
+        class Player extends Deck{
+            constructor(name) {
+                super()
+                this.name = name;
+                this.hand = [];
+                
+            }
+            newCard() {
+                this.hand.push(super.deal());
+                return this.hand;
+            }
+            discard(card) {
+                if (this.hand.length > 0) {
+                    return this.hand.pop();
+                }
+            }
+        }
+    const deck1 = new Deck();
+    const joe = new Player("Joe")
+    joe.newCard()
+    joe.newCard()
+    console.log(joe.hand)
+    deck1.shuffle()
+    joe.discard(1)
+    console.log(joe.hand)
+    joe.newCard()
+    console.log(joe.hand)
+    </script>
+</body>
+</html>

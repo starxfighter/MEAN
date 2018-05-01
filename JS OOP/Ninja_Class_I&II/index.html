@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Ninja Class I & 2</title>
+    <!-- <link rel="stylesheet" type="text/css" media="screen" href="main.css" /> -->
+    <!-- <script src="main.js"></script> -->
+</head>
+<body>
+    <script>
+        function Ninja(name){
+            this.name = name;
+            this.health = 100;
+            this.speed = 3;
+            this.strength = 3;
+            this.sayName = function(){
+                console.log("My ninja name is " + this.name)
+            }
+            this.showStats = function(){
+                console.log("Name: " + this.name + ", Health: " + this.health + ", Speed: " + this.speed + ", Strength: " + this.strength)
+            }
+            this.drinkSake = function(){
+                this.health += 10;
+                console.log("New health: " + this.health);
+            }
+            this.punch = function(ninja){
+                if(this instanceof Ninja == true){
+                    ninja.health -=5;
+                    console.log(ninja.name + " was punched by " + this.name + " and lost 5 Health!")
+                }
+            }
+            this.kick = function(ninja){
+                if(this instanceof Ninja == true){
+                    ninja.health -= 15;
+                    console.log(ninja.name + " was kicked by " + this.name + " and lost 15 Health!")
+                }
+            }
+
+        }
+        
+        var ninja1 = new Ninja("Hyabusa");
+        ninja1.sayName();
+        ninja1.showStats();
+        ninja1.drinkSake();
+        var blueNinja = new Ninja("Goemon");
+        var redNinja = new Ninja("Bill Gates");
+        blueNinja.kick(redNinja);
+        blueNinja.showStats();
+        redNinja.showStats();
+        redNinja.punch(blueNinja);
+        blueNinja.showStats();
+        redNinja.showStats();
+    </script>
+</body>
+</html>
