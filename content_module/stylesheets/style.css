@@ -1,0 +1,11 @@
+#photo{
+    width: 200px;
+    height: 200px;
+    display: inline-block;
+}
+#photo img{
+    width: 200px;
+}
+h1{
+    color: blue;
+}
