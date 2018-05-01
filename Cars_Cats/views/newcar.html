@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>New Car Form</title>
+    <link rel="stylesheet" type="text/css" href="stylesheets/style.css">
+</head>
+<body>
+        <h1>What car do you love?</h1>
+        <form action="" method="POST">
+            <h1>My Car Regisration Form</h1>
+            <label for="car_make">Car Make:</label>
+            <input type="text" id="car_make" name="car_make">
+            <p></p>
+            <label for="car_model">Car_model:</label>
+            <input type="text" id="car_model" name="car_model">
+            <p>Please select transmission type</p>
+                <label for="auto">Automatic</label>
+                <input type="radio" id="auto" name="transmission" value="automatic">
+                <label for="man">Manual</label>
+                <input type="radio" id="man" name="transmission" value="manual">
+
+            <p>Select power source:</p>
+            <select name="pwrsrc">
+                <option value="gas">Gas</option>
+                <option value="elec">Electric</option>
+                <option value="nuc">Nuclear</option>
+            </select>
+            <p></p>
+            <input type="submit" value="Submit">
+
+        </form>
+</body>
+</html>
