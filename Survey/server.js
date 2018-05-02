@@ -16,42 +16,21 @@ app.set('views', __dirname + '/views');
 app.set('view engine', 'ejs');
 
 app.get('/', function(request, response){
-    sess = request.session;
-    sess.counter = 0;
-    context = {
-        'counter' : sess.counter,
-    };
-    response.render('index', context);
+    response.render('index');
 });
 
-app.post('/count', function(request, response){
-    sess = request.session;
-    sess.counter += 1;
+app.post('/process', function(request, response){
+    form = request.body;
     context={
-        'counter' : sess.counter,
+        'name' : form.name,
+        'location' : form.location,
+        'favlang' : form.favlang,
+        'comment' : form.comment,
     };
-    response.render('index', context);
-});
-
-app.post('/ninja1', function(request, response){
-    sess = request.session;
-    sess.counter += 2;
-    context = {
-        'counter' : sess.counter,
-    };
-    response.render('index', context);
-});
-
-app.post('/ninja2', function(request, response){
-    sess = request.session;
-    sess.counter = 0;
-    context = {
-        'counter' : sess.counter,
-    };
-    response.render('index', context);
+    response.render('results', context);
 });
 
 // tell the express app to listen on port 8000, always put this at the end of your server.js file
 app.listen(8000, function() {
   console.log("listening on port 8000");
-})
+});

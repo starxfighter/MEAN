@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- <link rel="stylesheet" type="text/css" href="dojosurvey/static/css/reset.css"> -->
+    <!-- <link rel="stylesheet" type="text/css" href="../static/css/style.css"> -->
+    <link rel="stylesheet" type="text/css" href="/reset.css">
+    <link rel="stylesheet" type="text/css" href="/style.css">
+    <title>Dojo Survey</title>
+</head>
+<body>
+    <div id="survey">
+        <form action='/process' method='post'>
+            <label class="name" for="name">Your Name:</label>
+            <input class="namebox" type="text" name="name">
+
+            <label class="location" for="location">Dojo Location:</label>
+            <label class="radio" for="burbank">Burbank</label>
+            <input type="radio" id="burbank" name="location" value="burbank">
+            <label class="radio" for="other">Other</label>
+            <input type="radio" id="other" name="location" value="other">
+            
+            <p>Select your favorite language</p>
+            <select name="favlang">
+                <option value="java">Java</option>
+                <option value="html">HTML</option>
+                <option value="ruby">Ruby</option>
+            </select>
+
+            <p>Comment (Optional):</p>
+            <textarea name="comment"></textarea>
+
+            <input class="button" type="submit" value="Submit">
+
+        </form>
+
+    </div>
+</body>
+</html>
