@@ -1,0 +1,44 @@
+#photo{
+    width: 200px;
+    height: 200px;
+    display: block;
+    margin-top: 10px;
+    margin-left: 848px;
+
+}
+#photo img{
+    width: 200px;
+    border-radius: 20px;
+}
+h1{
+    color: black;
+    text-align: center;
+    background-color:#BA67C8;
+    height: 65px;
+    padding-top: 25px;
+    font-size: 36pt;
+}
+.food{
+    background-color: #CE93D9;
+    height: 120px;
+    padding: 10px;
+    margin-top: 10px;
+}
+.age{
+    background-color: #BA67C8;
+    height: 120px;
+    padding: 10px;
+    margin-top: 10px;
+}
+.sleepspot{
+    background-color: #9B28B0;
+    height: 300px;
+    padding: 10px;
+    margin-top: 10px;
+}
+h2, h4{
+    font-size: 18pt;
+}
+h3{
+    font-size: 14pt;
+}

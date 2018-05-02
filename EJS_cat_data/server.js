@@ -11,32 +11,51 @@ app.get('/', function(request, response) {
 })
 app.use(express.static(__dirname + '/static'));
 
-// app.get('/cars', function(request, response){
-//     response.render('cars.html');
-// }) 
 // This sets the location where express will look for the ejs views
 app.set('views', __dirname + '/views'); 
 // Now lets set the view engine itself so that express knows that we are using ejs as opposed to another templating engine like jade
 app.set('view engine', 'ejs');
-app.get("/cars", function(request, response){
-    response.render('cars')
-});
+
 app.get("/cats", function(request, response){
     response.render('cats')
 });
-app.get("/cars/new", function(request, response){
-    response.render()
+
+app.get("/grumpy", function (request, response){
+  // hard-coded user data
+  var cat_details = {
+        name: "Grumpy",
+        favfood: "Lemons",
+        age: 3,
+        sleepspot: ["under the bed", "on the tv"],
+        image: 'catfrown.jpg',
+  };
+  response.render('details', cat_details);
 });
-// app.get("/users", function (request, response){
-//   // hard-coded user data
-//   var users_array = [
-//       {name: "Michael", email: "michael@codingdojo.com"}, 
-//       {name: "Jay", email: "jay@codingdojo.com"}, 
-//       {name: "Brendan", email: "brendan@codingdojo.com"}, 
-//       {name: "Andrew", email: "andrew@codingdojo.com"}
-//   ];
-//   response.render('users', {users: users_array});
-// })
+
+app.get("/dwarves", function (request, response){
+    // hard-coded user data
+    var cat_details = {
+        name: "Grumpy, Sneeze, Dopey, Bashful, Happy",
+        favfood: "Magic Mushrooms",
+        age: "3, 3, 4, 4, 3",
+        sleepspot: ["under a mushroom", "in a boot", "in a tree limb", "in a bed"],
+        image: 'catgroup.jpg',
+  };
+  response.render('details', cat_details);
+});
+
+app.get("/tiny", function (request, response){
+    // hard-coded user data
+    var cat_details = {
+        name: "Tiny",
+        favfood: "Tapas",
+        age: 1,
+        sleepspot: ["in a coffee mug", "in a pocket"],
+        image: 'smallcat.jpg',
+  };
+  response.render('details', cat_details);
+});
+
 // tell the express app to listen on port 8000, always put this at the end of your server.js file
 app.listen(8000, function() {
   console.log("listening on port 8000");

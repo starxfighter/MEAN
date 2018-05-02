@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cats</title>
+    <link rel="stylesheet" type="text/css" href="/style.css">
+</head>
+<body>
+    <div id="wrapper">
+        <div id="header">
+            <h1>Details for <%= name %></h1>
+        </div>
+        <div id="photo">
+            <a href='/grumpy'><img class="pic" src="<%= image %>" alt="Cat Frown"></a>
+        </div>
+        <div class='food'>
+            <h2>Favorite Food: <%= favfood %></h2>
+        </div>
+        <div class='age'>
+            <h2>Age: <%= age %></h2>
+        </div>
+        <div class='sleepspot'>
+            <h4> Favorite Sleeping Spots: </h4>
+            <% for (var x in sleepspot) { %>
+                <h3><%= sleepspot[x] %></h3>
+            <% } %>
+        </div>
+
+    </div>
+</body>
+</html>
