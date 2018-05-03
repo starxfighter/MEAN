@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script type ="text/javascript" src="/socket.io/socket.io.js"></script>
+    <script type="text/javascript" src="/script.js"></script>
+    <link rel="stylesheet" type="text/css" href="/reset.css">
+    <link rel="stylesheet" type="text/css" href="/style.css">
+    <title>Real Time Colors</title>
+</head>
+<body>
+    <div id="wrapper" style="background-color: white;">
+        <div id='message'></div>
+        <div id='header'></div>
+        <div id="green">
+            <form class='greenbtn' action='#' method='post'>
+                <input class="button" type="submit" value="Green">
+            </form>
+        </div>
+        <div id='blue'>
+            <form class='bluebtn' action='#' method='post'>
+                <input class="button" type="submit" value="Blue">
+            </form>
+        </div>
+        <div id='pink'>
+            <form class='pinkbtn' action='#' method='post'>
+                <input class="button" type="submit" value="pink">
+            </form>
+        </div>
+    </div>
+</body>
+</html>
