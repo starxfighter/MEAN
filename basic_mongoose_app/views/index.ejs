@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- <link rel="stylesheet" type="text/css" href="dojosurvey/static/css/reset.css"> -->
+    <!-- <link rel="stylesheet" type="text/css" href="../static/css/style.css"> -->
+    <link rel="stylesheet" type="text/css" href="/reset.css">
+    <link rel="stylesheet" type="text/css" href="/style.css">
+    <title>Mongoose App</title>
+</head>
+<body>
+    <div id="survey">
+        <form action='/users' method='post'>
+            <label class="name" for="name">Your Name:</label>
+            <input class="namebox" type="text" name="name">
+            <label class="age" for="age">Your Age:</label>
+            <input class="agebox" type="text" name="age">
+            <input class="button" type="submit" value="Submit">
+        </form>
+    </div>
+    <div id='results'>
+        <% for (var x in users) { %>
+            <h3><%= users[x].name %></h3>
+            <h3><%= users[x].age %></h3>
+        <% } %>
+
+    </div>
+</body>
+</html>
