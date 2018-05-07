@@ -1,0 +1,47 @@
+.messages{
+    color: red;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+#quoteentry, #results{
+    background-color: lightgray;
+    border-color: blue;
+    border-style: solid;
+    border-radius: 10px;
+    border-width: 4px;
+    width: 500px;
+    height: 500px;
+    margin-top: 10px;
+    margin-left: 20px;
+}
+.form{
+    font-size: 16pt;
+    background-color: lightgreen;
+    margin-top: 10px;
+    margin-left: 10px;
+    padding: 10px;
+    margin-right: 10px;
+}
+.form input{
+    display: block;
+}
+h1{
+    font-size: 36pt;
+    text-align: center;
+}
+.button{
+    background-color: green;
+    color: white;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+.skipbtn{
+    background-color: blue;
+    color: white;
+    margin-top: 10px;
+    margin-left: 180px;
+}
+#results{
+    overflow: scroll;
+    padding: 10px;
+}

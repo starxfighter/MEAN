@@ -4,12 +4,14 @@ var session = require('express-session');
 var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
 
+
 // invoke express and store the result in the variable app
 var app = express();
 
 app.use(express.static(__dirname + '/static'));
 app.use(session({secret: 'codingdojo'}));
 app.use(bodyParser.urlencoded({extended: true}));
+
 
 // This sets the location where express will look for the ejs views
 app.set('views', __dirname + '/views'); 
