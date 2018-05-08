@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="/reset.css">
+    <link rel="stylesheet" type="text/css" href="/style.css">
+    <title>Dashboard</title>
+</head>
+<body>
+    <div id='wrapper'>
+        <div class='messages'>
+                <% JSON.stringify(messages) %>
+                <% if(messages.quote) { %>
+                    <% for (var x of messages.quote) { %>
+                        <h3><%= x %></h3>
+                    <% } %>
+                <% } %>
+        </div>
+        <div class="addmsg">
+            <h1>The Dojo Message Board</h1>
+            <form class='addmsg' action='/addmsg' method='post'>
+                <label class="name" for="name">Name:</label>
+                <input class="namebox" type="text" name="name">
+                <label class="message" for="message">Message:</label>
+                <textarea class="msgbox" name="message"></textarea>   
+                <input class='newbtn' type='submit' value='Add a new message!'>
+            </form>   
+        </div>
+        <div id='results'>
+            <h1>Here are the messages we currently have!</h1>
+            <% for (var x in dmessages) { %>
+                <h3>"<%= dmessages[x].name %>"</h3>
+                <h3><%= dmessages[x].message %></h3>
+                <% for (var y in dmessages[x].comments) { %>
+                    <h4><%= dmessages[x].comments[y].cname %></h4>
+                    <h5><%= dmessages[x].comments[y].comment %></h5>
+                <% } %>
+                <form class='addcmt' action='/addcmt/<%= dmessages[x]._id %>' method='post'>
+                    <label class="name" for="cname">Name:</label>
+                    <input class="namebox" type="text" name="cname">
+                    <label class="message" for="comment">Message:</label>
+                    <textarea class="msgbox" name="comment"></textarea> 
+                    <input class='newbtn' type='submit' value='Add a new comment!'>
+                </form>
+                <hr>
+            <% } %>
+        </div>
+    </div>
+</body>
+</html>
