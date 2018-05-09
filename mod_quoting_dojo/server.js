@@ -22,7 +22,7 @@ app.set('view engine', 'ejs');
 require('./server/config/mongoose.js')
 // require('./server/models/quote.js')
 
-var Quote = mongoose.model('Quote') // We are retrieving this Schema from our Models, named 'User'
+// var Quote = mongoose.model('Quote') // We are retrieving this Schema from our Models, named 'User'
 
 require('./server/config/routes.js')(app)
 
