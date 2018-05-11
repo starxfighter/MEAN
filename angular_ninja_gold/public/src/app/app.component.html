@@ -1,0 +1,34 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <h1>Welcome to the Ninja Gold Game!</h1>
+  <h4>Your Gold:</h4>
+  <h4>{{gold}}</h4>
+  <h4>Top Score:  {{topscore}}</h4>
+</div>
+<div id='routes'>
+  <div>
+    <h5>Farm</h5>
+    <h6>(earns 10 -20 golds)</h6>
+    <button (click)='farm()'>Show</button>
+  </div>
+  <div>
+      <h5>Cave</h5>
+      <h6>(earns 5 -10 golds)</h6>
+      <button (click)='cave()'>Show</button>
+  </div>
+  <div>
+      <h5>House</h5>
+      <h6>(earns 2 -5 golds)</h6>
+      <button (click)='house()'>Show</button>
+  </div>
+  <div>
+      <h5>Casino</h5>
+      <h6>(earns/takes 0 - 50 golds)</h6>
+      <button (click)='casino()'>Show</button>
+  </div>
+</div>
+<div id="activities">
+  <h2 *ngFor='let m of messages'>{{m}}</h2>
+</div>
+
+
