@@ -12,9 +12,13 @@ export class HttpService {
    }
 
    getTasks() {
+     // lines ar removed so that observable is returned to where it is called
     // our http response is an Observable, store it in a variable
-    const tempObservable = this._http.get('/all');
-    tempObservable.subscribe(data => console.log('Got our tasks!', data));
+    // const tempObservable = this._http.get('/all');
+    // tempObservable.subscribe(data => console.log('Got our tasks!', data));
+    // Return the observable to whereever the getTasks method was invoked
+    console.log('Getting all tasks');
+    return this._http.get('/all');
   }
 
   displayTask(id) {
