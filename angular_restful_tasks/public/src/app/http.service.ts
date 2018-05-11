@@ -8,7 +8,7 @@ export class HttpService {
 
   constructor(private _http: HttpClient) {
     this.getTasks();
-    this.displayTask('5af37b1e8129fb324973c769');
+    // this.displayTask('id');
    }
 
    getTasks() {
@@ -22,8 +22,11 @@ export class HttpService {
   }
 
   displayTask(id) {
-    const tempObservable = this._http.get('/' + id);
-    tempObservable.subscribe(data => console.log('Got single task', data));
+    // const tempObservable = this._http.get('/' + id);
+    // tempObservable.subscribe(data => console.log('Got single task', data));
+    console.log('getting one task');
+    console.log('http id', id);
+    return this._http.get('/' + id);
   }
 }
 

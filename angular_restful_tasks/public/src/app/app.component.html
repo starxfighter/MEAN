@@ -1,14 +1,20 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
+<div class='header' style="text-align:center">
   <h1>
     Restful Tasks API!
   </h1>
 </div>
 <h2>All the tasks: </h2>
-<h3 *ngFor="let task of tasks">
-    {{task.title}} - {{task.description}}
-    {{ title }} - {{description}}
-</h3>
+<button (click)='getTasksFromService()'>Get All Tasks!</button>
+<div id='results' *ngFor="let task of tasks">
+    <h3>{{task.title}} - {{task.description}}</h3>
+    <button (click)='displayOneTask(task._id)'>Show</button>
+</div>
+<div id='show' *ngIf='stask[0]'>
+    <h3>{{stask[0].title}}</h3>
+    <h3>{{stask[0].description}}</h3>
+</div>
+<!-- use below as base for show -->
 <h2>The Third Task: </h2>
 <h3 *ngIf="tasks[2]">
     {{tasks[2].title}} - {{tasks[2].description}}
