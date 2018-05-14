@@ -14,7 +14,7 @@ app.use(flash());
 
 app.set('views', __dirname + '/client/views');
 
-app.set('view engine', 'ejs');
+// app.set('view engine', 'ejs');
 
 require('./server/config/mongoose.js')
 

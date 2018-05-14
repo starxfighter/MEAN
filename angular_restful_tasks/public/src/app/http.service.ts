@@ -28,6 +28,26 @@ export class HttpService {
     console.log('http id', id);
     return this._http.get('/' + id);
   }
+
+  addTask(newtask) {
+    console.log('Adding a new task');
+    console.log('newtask information', newtask);
+    return this._http.post('/new', newtask);
+  }
+
+  updateTask(id, updatetask) {
+    console.log('Updating a task');
+    console.log('incoming id', id);
+    console.log('updatetask information', updatetask);
+    return this._http.put('/update/' + id, updatetask);
+  }
+
+  destroyTask(id) {
+    console.log('Destroying task');
+    console.log('destroy id', id);
+    return this._http.delete('/delete/' + id);
+  }
+
 }
 
 

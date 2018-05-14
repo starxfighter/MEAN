@@ -4,20 +4,33 @@
     Restful Tasks API!
   </h1>
 </div>
+<div class='form'>
+    <form (submit)='addNewTask()'>
+        <label>Title<input type="text" name="newtask.title" [(ngModel)]="newtask.title" /></label>
+        <label>Description<input type="text" name="newtask.description" [(ngModel)]="newtask.description" /></label>
+        <input type="submit" value="Create Task" />   
+    </form>
+</div>
 <h2>All the tasks: </h2>
-<button (click)='getTasksFromService()'>Get All Tasks!</button>
+<!-- <button (click)='getTasksFromService()'>Get All Tasks!</button> -->
 <div id='results' *ngFor="let task of tasks">
     <h3>{{task.title}} - {{task.description}}</h3>
-    <button (click)='displayOneTask(task._id)'>Show</button>
+    <button (click)='displayOneTask(task._id)'>Edit</button>
+    <button (click)='destroyOneTask(task._id)'>Delete</button>
 </div>
 <div id='show' *ngIf='stask[0]'>
     <h3>{{stask[0].title}}</h3>
     <h3>{{stask[0].description}}</h3>
 </div>
-<!-- use below as base for show -->
-<h2>The Third Task: </h2>
-<h3 *ngIf="tasks[2]">
-    {{tasks[2].title}} - {{tasks[2].description}}
-</h3>
+<!-- <div class='update' *ngIf='updatetask.title'> -->
+<div class='form' *ngIf='stask[0]'>
+    <form (submit)='updateTask(stask[0]._id)'>
+        <label>Title: <input type="text" name="updatetask.title" [(ngModel)]="updatetask.title" /></label>
+        <label>Description: <input type="text" name="updatetask.description" [(ngModel)]="updatetask.description" /></label>
+        <label>Completed?: <input type="boolean" name="updatetask.completed" [(ngModel)]="updatetask.completed" /></label>
+        <input type="submit" value="Update Task" />      
+    </form>
+</div>
+
 
 
