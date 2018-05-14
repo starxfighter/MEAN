@@ -13,7 +13,7 @@
 </div>
 <h2>All the tasks: </h2>
 <!-- <button (click)='getTasksFromService()'>Get All Tasks!</button> -->
-<div id='results' *ngFor="let task of tasks">
+<div id='results' *ngFor='let task of tasks'>
     <h3>{{task.title}} - {{task.description}}</h3>
     <button (click)='displayOneTask(task._id)'>Edit</button>
     <button (click)='destroyOneTask(task._id)'>Delete</button>
@@ -30,6 +30,9 @@
         <label>Completed?: <input type="boolean" name="updatetask.completed" [(ngModel)]="updatetask.completed" /></label>
         <input type="submit" value="Update Task" />      
     </form>
+</div>
+<div class='nestedshow' *ngIf='stask[0]' >
+    <app-taskshow  [displayOneTask]='stask[0]'></app-taskshow>
 </div>
 
 

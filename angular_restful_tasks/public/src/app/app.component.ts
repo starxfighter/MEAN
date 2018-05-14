@@ -9,6 +9,7 @@ import { HttpService } from './http.service';
 export class AppComponent implements OnInit {
 // export class AppComponent  {
   tasks = [];
+  results = [];
   stask = [];
   newtask: any;
   updatetask: any;
