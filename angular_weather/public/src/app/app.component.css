@@ -1,0 +1,15 @@
+h1{
+    font-size: 36pt;
+    text-align: center;
+}
+.nav{
+    text-align: center;
+    border-bottom-color: black;
+    border-bottom-style: solid;
+    border-bottom-width: 2px;
+}
+a, h2{
+    margin-right: 3px;
+    margin-left: 3px;
+    display: inline-block;
+}

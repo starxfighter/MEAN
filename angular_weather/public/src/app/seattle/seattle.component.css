@@ -1,0 +1,16 @@
+.header{
+    text-align: center;
+    font-size: 24pt;
+    color: blue;
+    display: block;
+}
+.data{
+    text-align: center;
+    font-size: 16pt;
+    display: inline-block;
+    width: 40%;
+}
+.photo{
+    display: inline-block;
+    width: 40%
+}
