@@ -1,0 +1,28 @@
+.main, .details{
+    background-color: lightslategray;
+    border-style: solid;
+    border-width: 3px;
+    border-color: peru;
+    border-radius: 10px;
+    text-align: center;
+    width: 40%;
+    display: inline-block;
+    vertical-align: top;
+    margin-top: 10px;
+    margin-left: 2px;
+}
+h1{
+    font-size: 24pt;
+    font-weight: bold;
+}
+.results{
+    background-color: mistyrose;
+    border-style: solid;
+    border-width: 3px;
+    border-color:burlywood;
+    border-radius: 10px;
+    text-align: center;
+}
+h3{
+    font-size: 14pt;
+}

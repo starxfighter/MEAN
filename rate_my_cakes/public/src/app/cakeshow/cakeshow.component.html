@@ -1,0 +1,11 @@
+<div class='main'>
+    <h1>Baked by {{displayOneCake.name}}</h1>
+    <img src="{{displayOneCake.url}}" height="300" width="300">
+</div>
+<div class='details'>
+    <h3>Average: {{average}} stars</h3>
+    <div class='results' *ngFor='let com of displayOneCake.ratings'>
+        <h3>{{com.stars}} Stars</h3>
+        <h3>{{com.comment}}</h3>
+    </div>
+</div>
