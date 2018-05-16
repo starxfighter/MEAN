@@ -1,0 +1,17 @@
+<h1>Browse the Ledger</h1>
+<h2>Here you can browse all ShintoCoin Transactions</h2>
+<h2>Number of ShintoCoins Owner: {{curcoins}}</h2>
+<table>
+    <tr>
+      <th>Action</th>
+      <th>Amount</th>
+      <th>Value</th>
+      <th></th>
+    </tr>
+    <tr *ngFor='let l of ledge;let i = index'>
+      <td>{{l.path}}</td>
+      <td>{{l.coins}}</td>
+      <td>{{l.value}}</td>
+      <td><a [routerLink]="['/details/', i]"><button>Detail</button></a></td>
+    </tr>
+  </table> 
