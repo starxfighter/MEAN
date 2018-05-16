@@ -1,0 +1,13 @@
+<a [routerLink]="['/display']"><button>Home</button></a>
+
+<h3>Edit this author:</h3>
+<div class='form'>
+  <form (submit) = 'updateAuthor(id)'>
+    <label>Author Name: <input type="text" name="updateauthor.name" [(ngModel)]="updateauthor.name"/></label> 
+    <a [routerLink]="['/display']"><button>Cancel</button></a>
+    <input type='submit' value='Submit'/>
+  </form>
+</div>
+<div *ngFor='let e of message'>
+    {{e}}
+</div>

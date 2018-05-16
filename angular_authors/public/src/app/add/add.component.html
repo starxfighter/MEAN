@@ -1,0 +1,13 @@
+<a [routerLink]="['/display']"><button>Home</button></a>
+
+<h3>Add a new author:</h3>
+<div class='form'>
+  <form (submit) = 'addNewAuthor()'>
+    <label>Baker Name: <input type="text" name="newauthor.name" [(ngModel)]="newauthor.name"/></label> 
+    <a [routerLink]="['/display']"><button>Cancel</button></a>
+    <input type='submit' value='Submit'/>
+  </form>
+</div>
+<div *ngFor='let e of message'>
+    {{e}}
+</div>
