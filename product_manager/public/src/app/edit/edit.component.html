@@ -1,0 +1,13 @@
+<h3>Edit this product:</h3>
+<div class='form'>
+  <form (submit) = 'updateProduct(id)'>
+    <label>Product Title: <input type="text" name="updateproduct.title" [(ngModel)]="updateproduct.title"/></label> 
+    <label>Product Price: <input type="text" name="updateproduct.price" [(ngModel)]="updateproduct.price"/></label> 
+    <label>Product URL: <input type="text" name="updateproduct.url" [(ngModel)]="updateproduct.url"/></label> 
+    <input type='submit' value='Update'/>
+    <a [routerLink]="['/home/products']"><button>Cancel</button></a>
+  </form>
+</div>
+<div *ngFor='let e of message'>
+    {{e}}
+</div>

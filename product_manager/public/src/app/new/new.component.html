@@ -1,0 +1,13 @@
+<h3>Create a New Product:</h3>
+<div class='form'>
+  <form (submit) = 'addNewProduct()'>
+    <label>Title: <input type="text" name="newproduct.title" [(ngModel)]="newproduct.title"/></label> 
+    <label>Price: <input type="text" name="newproduct.price" [(ngModel)]="newproduct.price"/></label> 
+    <label>Url: <input type="text" name="newproduct.url" [(ngModel)]="newproduct.url"/></label> 
+    <input type='submit' value='Submit'/>
+    <a [routerLink]="['/home/welcome']"><button>Cancel</button></a>
+  </form>
+</div>
+<div *ngFor='let e of message'>
+    {{e}}
+</div>
