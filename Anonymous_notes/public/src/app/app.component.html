@@ -1,0 +1,16 @@
+<div class='wrapper'>
+  <h1>Anonymous Notes</h1>
+  <div class='form'>
+      <form (submit)='addNewNote()'>
+          <label>Description<input type="text" name="newnote.description" [(ngModel)]="newnote.description" /></label>
+          <input type="submit" value="Add Note" />   
+      </form>
+  </div>
+  <div class='results'>
+      <div class='details' *ngFor='let note of notes' ng-controller="datCtrl">
+        <h4>{{note.createdAt | date: "medium"}}</h4>
+        <h3>{{note.description}}</h3>
+      </div>
+  </div>
+</div>
+

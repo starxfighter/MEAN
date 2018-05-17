@@ -1,0 +1,25 @@
+.wrapper{
+    background-color: lightgrey;
+}
+h1{
+    text-align: center;
+}
+.form{
+    background-color: lightgoldenrodyellow;
+    padding: 10px;
+}
+label{
+    margin-right: 3px;
+}
+.results{
+    overflow: scroll;
+    padding: 3px;
+}
+.details{
+    border-color: black;
+    border-style: solid;
+    border-width: 2px;
+}
+h4{
+    float: right;
+}
