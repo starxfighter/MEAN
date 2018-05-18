@@ -1,0 +1,65 @@
+<div class='results'>  
+    <table>
+      <tr>
+          <th>Player Name</th>
+          <th>Actions</th>
+        </tr>
+      <tr *ngFor='let p of players;let i = index'>
+        <td>{{p.name}}</td>
+        <td *ngIf="gid == '1'">
+          <p *ngIf="p.game1status == 'playing'">
+            <button [ngStyle]="{'background-color' : 'green'}" (click) = "updatePlayer(p._id, 'playing')">Playing</button>
+            <button (click) = "updatePlayer(p._id, 'Not playing')">Not Playing</button>
+            <button (click) = "updatePlayer(p._id, 'Undecided')">Undecided</button>
+          </p>
+          <span *ngIf="p.game1status == 'Not playing'">
+              <button (click) = "updatePlayer(p._id, 'playing')">Playing</button>
+              <button [ngStyle]="{'background-color' : 'red'}" (click) = "updatePlayer(p._id, 'Not playing')">Not Playing</button>
+              <button (click) = "updatePlayer(p._id, 'Undecided')">Undecided</button>
+          </span>
+          <span *ngIf="p.game1status == 'Undecided'">
+              <button (click) = "updatePlayer(p._id, 'playing')">Playing</button>
+              <button (click) = "updatePlayer(p._id, 'Not playing')">Not Playing</button>
+              <button [ngStyle]="{'background-color' : 'yellow'}" (click) = "updatePlayer(p._id, 'Undecided')">Undecided</button>
+          </span>
+        </td>
+        <td *ngIf="gid == '2'">
+            <p *ngIf="p.game2status == 'playing'">
+              <button [ngStyle]="{'background-color' : 'green'}" (click) = "updatePlayer(p._id, 'playing')">Playing</button>
+              <button (click) = "updatePlayer(p._id, 'Not playing')">Not Playing</button>
+              <button (click) = "updatePlayer(p._id, 'Undecided')">Undecided</button>
+            </p>
+            <span *ngIf="p.game2status == 'Not playing'">
+                <button (click) = "updatePlayer(p._id, 'playing')">Playing</button>
+                <button [ngStyle]="{'background-color' : 'red'}" (click) = "updatePlayer(p._id, 'Not playing')">Not Playing</button>
+                <button (click) = "updatePlayer(p._id, 'Undecided')">Undecided</button>
+            </span>
+            <span *ngIf="p.game2status == 'Undecided'">
+                <button (click) = "updatePlayer(p._id, 'playing')">Playing</button>
+                <button (click) = "updatePlayer(p._id, 'Not playing')">Not Playing</button>
+                <button [ngStyle]="{'background-color' : 'yellow'}" (click) = "updatePlayer(p._id, 'Undecided')">Undecided</button>
+            </span>
+          </td>
+          <td *ngIf="gid == '3'">
+              <p *ngIf="p.game3status == 'playing'">
+                <button [ngStyle]="{'background-color' : 'green'}" (click) = "updatePlayer(p._id, 'playing')">Playing</button>
+                <button (click) = "updatePlayer(p._id, 'Not playing')">Not Playing</button>
+                <button (click) = "updatePlayer(p._id, 'Undecided')">Undecided</button>
+              </p>
+              <span *ngIf="p.game3status == 'Not playing'">
+                  <button (click) = "updatePlayer(p._id, 'playing')">Playing</button>
+                  <button [ngStyle]="{'background-color' : 'red'}" (click) = "updatePlayer(p._id, 'Not playing')">Not Playing</button>
+                  <button (click) = "updatePlayer(p._id, 'Undecided')">Undecided</button>
+              </span>
+              <span *ngIf="p.game3status == 'Undecided'">
+                  <button (click) = "updatePlayer(p._id, 'playing')">Playing</button>
+                  <button (click) = "updatePlayer(p._id, 'Not playing')">Not Playing</button>
+                  <button [ngStyle]="{'background-color' : 'yellow'}" (click) = "updatePlayer(p._id, 'Undecided')">Undecided</button>
+              </span>
+            </td>
+      </tr>
+    </table>
+  </div>
+  <div *ngFor='let e of message'>
+    {{e}}
+  </div>

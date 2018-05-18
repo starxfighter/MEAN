@@ -1,0 +1,12 @@
+<h3>Add Player:</h3>
+<div class='form'>
+  <form (submit) = 'addNewPlayer()'>
+    <label>Name: <input type="text" name="newplayer.name" required minlength='3'[(ngModel)]="newplayer.name" #name="ngModel"/></label> 
+    <label>Preferred Position: <input type="text" name="newplayer.position" [(ngModel)]="newplayer.position"/></label> 
+    <input *ngIf="!name.errors" type='submit' value='Submit'/>
+    <a [routerLink]="['/home/players/list']"><button>Cancel</button></a>
+  </form>
+</div>
+<div *ngFor='let e of message'>
+    {{e}}
+</div>

@@ -1,0 +1,25 @@
+<div class='results'>  
+    <table>
+      <tr>
+          <th>Player Name</th>
+          <th>Actions</th>
+        </tr>
+      <tr *ngFor='let p of players;let i = index'>
+        <td>{{p.name}}</td>
+        <td>
+          <button (click) = "updatePlayer(p._id, 'playing')">Playing</button>
+          <button (click) = "updatePlayer(p._id, 'Not playing')">Not Playing</button>
+          <button (click) = "updatePlayer(p._id, 'Undecided')">Undecided</button>
+        </td>
+        <td>
+            <h2 *ngIf="gid == '1'">Game1status {{p.game1status}}</h2>
+            <h2 *ngIf="gid == '2'">Game2status {{p.game2status}}</h2>
+            <h2 *ngIf="gid == '3'">Game3status {{p.game3status}}</h2>
+            <h2>Gid {{gid}}</h2>
+          </td>
+      </tr>
+    </table>
+  </div>
+  <div *ngFor='let e of message'>
+    {{e}}
+  </div>
